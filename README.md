@@ -1,4 +1,4 @@
-# ZanFacialExpression
+# FacialExpression
 
 SkinnedMeshRenderer の BlendShape を利用してキャラクタの表情を管理、運用するためのコンポーネントを提供します。
 
@@ -19,13 +19,13 @@ Mesh には表情を作るための BlendShape が存在している必要があ
 
 以下に定義されている区分を表情を構成する BlendShape として認識します。
 
-| 変化部位と性質 | 接頭辞 | 例 | 注釈 |
-| -------- | -------------- | ---------------------------------- | ------------- |
-| 瞳の模様 | IrisType_{XXX} | 瞳にハートが映っている<br> 瞳に星が映っている<br> etc. |               |
-| 瞳の形状 | IrisForm_{XXX} | 瞳が小さくなる<br> etc.                   | 瞬きにも利用される     |
-| 眉の屈曲 | Eyebrow_{XXX}  | 困り眉（／  ＼）<br> 怒り眉（＼  ／）<br> etc.   |               |
-| 目の形状 | EyeForm_{XXX}  | 目を瞑っている<br> 片目だけ瞑っている<br> etc.     |               |
-| 唇の形状 | LipForm_{XXX}  | 口を開いている<br> 口角が上がっている<br> etc.     | リップシンクにも利用される |
+| 変化部位と性質 | 接頭辞            | 例                                  | 注釈            |
+| ------- | -------------- | ---------------------------------- | ------------- |
+| 瞳の模様    | IrisType_{XXX} | 瞳にハートが映っている<br> 瞳に星が映っている<br> etc. |               |
+| 瞳の形状    | IrisForm_{XXX} | 瞳が小さくなる<br> etc.                   | 瞬きにも利用される     |
+| 眉の屈曲    | Eyebrow_{XXX}  | 困り眉（／  ＼）<br> 怒り眉（＼  ／）<br> etc.   |               |
+| 目の形状    | EyeForm_{XXX}  | 目を瞑っている<br> 片目だけ瞑っている<br> etc.     |               |
+| 唇の形状    | LipForm_{XXX}  | 口を開いている<br> 口角が上がっている<br> etc.     | リップシンクにも利用される |
 
 BlendShape の名称の接頭辞が上記と一致したものをその区分として認識します。
 
@@ -114,6 +114,7 @@ BlendShape の設定値に左辺と右辺が異なるモノが無い場合は瞬
 また、BlendShape 名の左側にチェックボックスがありますが、こちらはチェックが入っている場合、左辺と右辺を反転した状態として扱います。
 
 反転を使用した例としては以下があげられます
+
 - 両目を閉じる BlendShape にチェックを入れた状態で 0～1 を設定する
 - 片目を瞑る BlendShape を 0～1 に設定し、両目を瞑る BlendShape にチェックを入れた状態で 0～1 に設定します。
 
@@ -149,9 +150,8 @@ BlendShape の設定値に左辺と右辺が異なるモノが無い場合はリ
 
 タイムラインで表情を設定するトラック、クリップを提供しています。
 
-`Zan.FacialExpression/Face Controller Track` を選択することでトラックが追加されます。
+`Knit.Timeline/Face Controller Track` を選択することでトラックが追加されます。
 
 FaceControllerTrack にクリップを追加すると、[FaceController の Inspector](#設定---facial-expression) と同じ項目が設定できる状態となります。
 
 FaceController で設定する場合と異なり、[Setting](#Setting) に設定ファイルを設置していない状態であっても状態は保存されます。
-

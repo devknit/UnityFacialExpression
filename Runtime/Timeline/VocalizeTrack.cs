@@ -2,14 +2,14 @@
 using UnityEngine;
 using UnityEngine.Timeline;
 using UnityEngine.Playables;
-using UnityEngine.Audio;
-using System.Net.Http.Headers;
+using System.ComponentModel; 
 
 namespace Knit.FacialExpression
 {
 	[TrackClipType( typeof( VocalizeClip))]
 	[TrackBindingType( typeof( VocalizeSource))]
 	[TrackColor( 255.0f / 255.0f, 162.0f / 255.0f, 0.0f / 255.0f)]
+	[DisplayName( "Knit.Timeline/Vocalize Track")]
 	sealed class VocalizeTrack : TrackAsset
 	{
 		public override Playable CreateTrackMixer( PlayableGraph graph, GameObject go, int inputCount)

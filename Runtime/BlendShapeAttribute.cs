@@ -1,4 +1,4 @@
-
+﻿
 namespace Knit.FacialExpression
 {
 	[System.Flags]

@@ -1,7 +1,7 @@
 ﻿
 using UnityEngine;
-using System.Collections.Generic;
 using UnityEngine.Playables;
+using System.Collections.Generic;
 
 namespace Knit.FacialExpression
 {

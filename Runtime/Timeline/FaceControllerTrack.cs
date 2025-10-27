@@ -2,12 +2,14 @@
 using UnityEngine;
 using UnityEngine.Timeline;
 using UnityEngine.Playables;
+using System.ComponentModel; 
 
 namespace Knit.FacialExpression
 {
 	[TrackClipType( typeof( FaceControllerClip))]
 	[TrackBindingType( typeof( FaceController))]
 	[TrackColor( 127.0f / 255.0f, 252.0f / 255.0f, 228.0f / 255.0f)]
+	[DisplayName( "Knit.Timeline/Face Controller Track")]
 	sealed class FaceControllerTrack : TrackAsset, ILayerable
 	{
 		public override Playable CreateTrackMixer( PlayableGraph graph, GameObject go, int inputCount)
